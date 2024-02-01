@@ -1,0 +1,9 @@
+fun alternate (intList : int) =
+    let fun sum_alternative (intList : int, sign : int) =
+	    if null intList
+	    then 0
+	    else if sign
+	    then hd + alternate(tl intList, not sign)
+	    else hd - alternate(tl intList, not sign)
+    in sum_alternative(intList, true)
+    end
